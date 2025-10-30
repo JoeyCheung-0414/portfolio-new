@@ -162,10 +162,10 @@ footer ul {
 
 /* Home Page
 ---------------------------------------------------------------*/
-.splash { 
+.splash {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 
     width: 100vw;
     height: 50rem;
@@ -173,37 +173,38 @@ footer ul {
     background-size: 150%;
 }
 
-@media (max-width:600px) { 
-    .splash{ 
+@media (max-width:600px) {
+    .splash {
         height: 40rem;
         background-size: 250%;
     }
 }
 
-.splash h1 { 
+.splash h1 {
     display: flex;
     align-items: center;
-    justify-content: center; 
-    width: 100%; 
+    justify-content: center;
+    width: 100%;
     height: 70%;
     background-color: #1c7430;
-    
+
 
     text-align: center;
     font-size: 10rem;
 }
 
-@media (min-width:1000px) { 
-    .splash h1 { 
+@media (min-width:1000px) {
+    .splash h1 {
         font-size: 9em;
     }
 }
 
-@media (max-width:700px) { 
-    .splash h1 { 
+@media (max-width:700px) {
+    .splash h1 {
         font-size: 7rem;
     }
 }
+
 .home-projects-container {
     display: flex;
     justify-content: center;
@@ -214,12 +215,12 @@ footer ul {
 ---------------------------------------------------------------*/
 
 @media (min-width: 900px) {
-    .fav-projects{
+    .fav-projects {
         display: flex;
         justify-content: center;
     }
 
-    .fav-box { 
+    .fav-box {
         width: 30%;
     }
 }
@@ -228,13 +229,13 @@ footer ul {
     margin: 1rem 1rem;
     margin-bottom: 3rem;
     padding: .5rem 1rem;
-    
+
     background-color: rgb(137, 63, 160);
     text-align: center;
 }
 
 .fav-preview {
-    margin: 3rem 2rem ;
+    margin: 3rem 2rem;
 
     text-align: center;
     cursor: pointer;
@@ -244,7 +245,7 @@ footer ul {
     width: 100%;
 }
 
-.home-titles { 
+.home-titles {
     padding-top: 4rem;
     margin: 2rem;
 
@@ -274,7 +275,7 @@ footer ul {
 
 @media (min-width: 1501px) {
     .fav-pop-box {
-        width: 60vw ;
+        width: 60vw;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -285,7 +286,7 @@ footer ul {
 @media (max-width: 1500px) {
 
     .fav-pop-box {
-        width: 90vw ;
+        width: 90vw;
         top: 50%;
         left: 40%;
         transform: translate(-40%, -50%);
@@ -306,11 +307,12 @@ footer ul {
 }
 
 
-@media (min-width: 600px) { 
+@media (min-width: 600px) {
     .fav-pop-content {
-    display: flex;
+        display: flex;
+    }
 }
-}
+
 .fav-pop-content {
     margin: 2rem 1.5rem;
 }
@@ -324,9 +326,6 @@ footer ul {
     text-align: left;
 }
 
-/*
----------------------------------------------------------------*/
-
 /*Projects Page
 ---------------------------------------------------------------*/
 
@@ -336,40 +335,23 @@ footer ul {
 
 }
 
-.pj-side-nav {
-    background-color: #1fe24c;
-    padding: 1rem;
-
-    text-align: left;
-    font-size: 2rem;
-}
-
-.pj-side-nav a {
-    display: block;
-    padding: 1rem 2rem;
-    background-color: #e29530;
-    border-radius: 1rem;
-}
-
-.pj-side-nav a:hover {
-    background: #1c7430;
-    transition: all .5s;
-}
-
 .pj-content {
     background-color: #e29530;
 }
 
 .pj-title {
     margin: 2rem 1rem 1rem 1rem;
+    text-align: center;
 }
 
 .pj-sect {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     background-color: brown;
 
     margin: 2rem;
+    align-items: center;
 }
 
 
@@ -387,26 +369,17 @@ footer ul {
 }
 
 .pj-preview img {
-    width: 30rem;
-}
-
-
-@media (max-width: 550px) {
-    .pj-sect {
-        display: block;
+        width: 40rem;
     }
 
+@media (max-width: 600px) {
     .pj-preview img {
         width: 35rem;
     }
-
-    .pj-side-nav {
-        display: none;
-    }
 }
 
 
-@media (max-width: 370px) {
+@media (max-width: 570px) {
     .pj-preview img {
         width: 30rem;
     }
@@ -426,8 +399,6 @@ footer ul {
     visibility: hidden;
 }
 
-
-
 .pj-pop-box {
     position: absolute;
     border-radius: 2rem;
@@ -436,7 +407,7 @@ footer ul {
 
 @media (min-width: 1501px) {
     .pj-pop-box {
-        width: 60vw ;
+        width: 60vw;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -445,9 +416,8 @@ footer ul {
 }
 
 @media (max-width: 1500px) {
-
     .pj-pop-box {
-        width: 90vw ;
+        width: 90vw;
         top: 50%;
         left: 40%;
         transform: translate(-40%, -50%);
@@ -469,11 +439,12 @@ footer ul {
 }
 
 
-@media (min-width: 600px) { 
+@media (min-width: 600px) {
     .pj-pop-content {
-    display: flex;
+        display: flex;
+    }
 }
-}
+
 .pj-pop-content {
     margin: 2rem 1.5rem;
 }
@@ -486,3 +457,26 @@ footer ul {
     margin: 0rem 2%;
     text-align: left;
 }
+
+/* About Page
+---------------------------------------------------------------*/
+
+#about { 
+    margin: 1rem 2rem;
+}
+
+.intro { 
+
+}
+
+.intro img { 
+    width: 100px;
+}
+/* Ab
+---------------------------------------------------------------*/
+/* Ab
+---------------------------------------------------------------*/
+/* Ab
+---------------------------------------------------------------*/
+/* Ab
+---------------------------------------------------------------*/
