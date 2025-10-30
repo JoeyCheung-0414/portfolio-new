@@ -8,6 +8,7 @@
     box-sizing: border-box;
 
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 html {
@@ -16,15 +17,27 @@ html {
         Ex. 
         5px = .5 rem
         20px =  2rem*/
+
+    background-image: url(../assets/cat-background.jpg);
+    background-size: 140%;
+    background-size: repeat;
+}
+
+@media (max-width: 800px) {
+    html {
+        background-size: 200%;
+        background-size: repeat;
+    }
 }
 
 body {
-    width: 100vw;
+    width: 99vw;
     margin: 0;
 
     font-size: 1.6rem;
-}
 
+    overflow-x: hidden;
+}
 
 /* Navigation: 
 ---------------------------------------------------------------*/
@@ -41,7 +54,7 @@ body {
 }
 
 .logo a h1 {
-    color: #fff;
+    color: #1c1363;
     text-decoration: none;
     font-size: 2.4rem;
 }
@@ -49,11 +62,11 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
+    width: 100vw;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #28a745;
-    /* Green background */
-    color: #fff;
+    background-color: #84c6ec;
+
 }
 
 /* Logo styling */
@@ -74,20 +87,21 @@ body {
 }
 
 .nav-links a {
-    color: #fff;
+    color: #1c1363;
     text-decoration: none;
     font-size: 1.8rem;
     transition: color 0.3s, text-decoration 0.3s, background-color 0.3s;
     padding: 1.5rem 2.5rem;
+    border-radius: 1.5rem;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: #e0e0e0;
     /* Lighter color for active/hover */
-    background-color: #1c7430;
+    background-color: #4a75b6;
     /* Darker green background on hover */
-    border-radius: .4rem;
+    border-radius: 1.5rem;
     /* Optional: rounded corners */
 }
 
@@ -110,12 +124,19 @@ body {
     .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: 100vw;
         position: absolute;
         top: 6rem;
         left: 0;
-        background-color: #28a745;
+        background-color: #84c6ec;
+
         /* Green background for mobile view */
+    }
+
+    .nav-links a,
+    .nav-links a:hover,
+    .nav-links a.active {
+        padding: 1rem 3rem;
     }
 
     .nav-links.active {
@@ -138,26 +159,29 @@ footer {
     /* position: fixed;
     bottom: 0; */
     width: 100vw;
-    background-color: aqua;
+    background-color: #84c6ec;
 }
 
 .foot-container {
-    display: flex;
     width: 100vw;
 
-    padding: .5rem 1rem;
+    padding: 2rem 5rem;
     margin: 0 auto;
 
-    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-footer ul {
-    display: flex;
-    list-style: none;
+footer h3 {
+    margin: 0;
+
+    font-weight: 500;
+    font-size: 1.5rem;
 }
+
 
 .social-icon {
-    width: 3rem;
+    width: 4rem;
 }
 
 /* Home Page
@@ -171,6 +195,8 @@ footer ul {
     height: 50rem;
     background-image: url(../assets/cat-splash.jpg);
     background-size: 150%;
+
+    margin-top: 3rem;
 }
 
 @media (max-width:600px) {
@@ -180,28 +206,24 @@ footer ul {
     }
 }
 
-.splash h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 70%;
-    background-color: #1c7430;
-
+.splash-content {
+    width: 100vw;
+    background-color: #2d4596d5;
+    color: white;
 
     text-align: center;
-    font-size: 10rem;
+    font-size: 150%;
+
+    padding: 3rem 2rem;
 }
 
-@media (min-width:1000px) {
-    .splash h1 {
-        font-size: 9em;
-    }
+.splash-content h1 {
+    font-size: 350%;
 }
 
-@media (max-width:700px) {
-    .splash h1 {
-        font-size: 7rem;
+@media (max-width: 650px) {
+    .splash-content {
+        font-size: 100%;
     }
 }
 
@@ -226,12 +248,16 @@ footer ul {
 }
 
 .fav-box {
-    margin: 1rem 1rem;
+    margin: 1rem 1.5rem;
     margin-bottom: 3rem;
     padding: .5rem 1rem;
 
-    background-color: rgb(137, 63, 160);
+    background-color: #c0f1bb;
+    border: .8rem solid #73b66c;
+    border-radius: 2rem;
+
     text-align: center;
+    color: #034903;
 }
 
 .fav-preview {
@@ -243,11 +269,18 @@ footer ul {
 
 .fav-preview img {
     width: 100%;
+    border: .5rem solid #73b66c;
+    border-radius: 2rem;
+    
 }
 
-.home-titles {
-    padding-top: 4rem;
+.home-title {
+    padding: 3rem;
     margin: 2rem;
+    margin-top: 4rem;
+
+    background-color: #4fa3469a;
+    color: #034903;
 
     text-align: center;
     font-size: 5rem;
@@ -262,7 +295,8 @@ footer ul {
     width: 100vw;
     height: 100vh;
 
-    background-color: rgba(40, 0, 73, 0.80);
+    background-color: rgba(0, 1, 73, 0.8);
+    color: rgba(0, 1, 73, 0.8) ;
 
     visibility: hidden;
 }
@@ -297,7 +331,7 @@ footer ul {
     padding: .5rem 1rem;
 
     border-radius: .3rem .3rem 0rem 0rem;
-    background-color: #1fe24c;
+    background-color: #84c6ec;
     text-align: right;
 }
 
@@ -332,23 +366,24 @@ footer ul {
 .projects-container {
     display: flex;
     justify-content: center;
-
-}
-
-.pj-content {
-    background-color: #e29530;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pj-title {
     margin: 2rem 1rem 1rem 1rem;
     text-align: center;
+
+    background-color: #4fa3469a;
+    color: #034903;
+
+    padding: 1.5rem;
 }
 
 .pj-sect {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: brown;
 
     margin: 2rem;
     align-items: center;
@@ -356,11 +391,15 @@ footer ul {
 
 
 .pj-box {
-    margin: 1rem .5rem;
+    box-sizing: border-box;
+    margin: 1rem 1rem;
 
-    background-color: rgb(137, 63, 160);
+    background-color: #c0f1bb;
+    border: .8rem solid #73b66c;
+    border-radius: 2rem;
 
     text-align: center;
+    color: #034903;
 }
 
 .pj-preview {
@@ -369,8 +408,10 @@ footer ul {
 }
 
 .pj-preview img {
-        width: 40rem;
-    }
+    width: 40rem;
+    border-bottom: .7rem solid #73b66c;
+    border-radius: 1.2rem 1.2rem 0 0;
+}
 
 @media (max-width: 600px) {
     .pj-preview img {
@@ -394,7 +435,8 @@ footer ul {
     width: 100vw;
     height: 100vh;
 
-    background-color: rgba(40, 0, 73, 0.80);
+    background-color: rgba(0, 1, 73, 0.8);
+    color: rgba(0, 1, 73, 0.8) ;
 
     visibility: hidden;
 }
@@ -428,7 +470,7 @@ footer ul {
     padding: .5rem 1rem;
 
     border-radius: .3rem .3rem 0rem 0rem;
-    background-color: #1fe24c;
+    background-color: #84c6ec;
     text-align: right;
 }
 
@@ -461,13 +503,122 @@ footer ul {
 /* About Page
 ---------------------------------------------------------------*/
 
-#about { 
-    margin: 1rem 2rem;
+#about {
+    margin: 2rem 2rem;
 }
 
-.intro img { 
-    width: 100px;
+.intro {
+    padding: 3rem 2rem;
+    background-image: url(../assets/cat-splash.jpg);
+    background-size: 180%;
+
+    margin-bottom: 2rem;
 }
+
+@media (min-width:700px) {
+    .intro {
+        display: flex;
+        background-size: 120%;
+    }
+
+    .intro div {
+        width: 50%;
+    }
+}
+
+.intro-info {
+    background-color: #ffffffe0;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-left: 2rem;
+}
+
+.ab-cover-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro div {
+    box-sizing: border-box;
+}
+
+.intro img {
+    box-sizing: border-box;
+    width: 100%;
+
+    border-radius: 2rem;
+    border: .8rem solid #305ea3;
+}
+
+.resume-btn {
+    display: inline-block;
+
+    padding: 1.5rem 3rem;
+    border-radius: 2rem;
+
+    background-color: #c0f1bb;
+    color: #034903;
+
+    text-decoration: none;
+}
+
+.resume-btn:hover {
+    background-color: #73b66c;
+    color: white;
+    transition: all .5s;
+}
+
+.ab-sect {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    background-color: #dbfcd8;
+}
+
+.ab-sect ul {
+    list-style-type: '💚';
+    margin-left: 5rem;
+}
+
+.ab-title {
+    margin: 0;
+    padding: 1rem 2rem;
+    border-radius: 2rem 2rem 0 0rem;
+    background-color: #84c6ec;
+
+}
+
+.ab-ed {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 1rem 3rem;
+    background-color: #c0f1bb;
+}
+
+.ab-ed h2 {
+    margin: .7rem 3rem;
+}
+
+@media (max-width: 600px) {
+    .ab-ed {
+        display: block;
+    }
+
+    .ab-ed h2 {
+        margin: .5rem;
+        font-size: 98%;
+    }
+
+    .ab-date {
+        margin-top: 2rem;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
+
 /* Ab
 ---------------------------------------------------------------*/
 /* Ab
