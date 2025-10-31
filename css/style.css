@@ -7,7 +7,10 @@
 * {
     box-sizing: border-box;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Patrick Hand", Arial, Helvetica, sans-serif;
+    letter-spacing: .1rem;
+
+    color: #1c1363;
 
 }
 
@@ -39,24 +42,36 @@ body {
     overflow-x: hidden;
 }
 
+h2 {
+    color: #034903;
+}
+
 /* Navigation: 
 ---------------------------------------------------------------*/
 .logo {
     display: flex;
     align-items: center;
+
 }
 
 .logo a img {
-    width: 6rem;
-    height: 6rem;
-
+    width: 5rem;
+    height: 5rem;
+    
     margin-right: 1rem;
+    margin-top: .5rem;
 }
 
-.logo a h1 {
+.logo h1 {
+    margin: 0;
+    margin-bottom: 1rem;
     color: #1c1363;
+
+    font-family: "Jersey 10", sans-serif;
+    font-size: 4rem;
+    font-weight: 350;
+    letter-spacing: .2rem;
     text-decoration: none;
-    font-size: 2.4rem;
 }
 
 .navbar {
@@ -73,7 +88,8 @@ body {
 .logo a {
     color: #fff;
     text-decoration: none;
-    font-size: 2.4rem;
+    font-size: 5rem;
+    margin: 0;
 }
 
 /* Navigation links styling */
@@ -83,15 +99,15 @@ body {
 }
 
 .nav-links li {
-    margin: 0 1rem;
+    margin: 0 .5rem;
 }
 
 .nav-links a {
     color: #1c1363;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     transition: color 0.3s, text-decoration 0.3s, background-color 0.3s;
-    padding: 1.5rem 2.5rem;
+    padding: 1rem 2.5rem;
     border-radius: 1.5rem;
 }
 
@@ -218,7 +234,17 @@ footer h3 {
 }
 
 .splash-content h1 {
-    font-size: 350%;
+    margin: 0rem;
+    color: white;
+
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 450;
+    letter-spacing: .5rem;
+    font-size: 600%;
+}
+
+.splash-content h2 {
+    color: white;
 }
 
 @media (max-width: 650px) {
@@ -271,19 +297,21 @@ footer h3 {
     width: 100%;
     border: .5rem solid #73b66c;
     border-radius: 2rem;
-    
+
 }
 
 .home-title {
-    padding: 3rem;
+    padding: 2rem;
     margin: 2rem;
     margin-top: 4rem;
 
     background-color: #4fa3469a;
     color: #034903;
 
+    font-family: "Agbalumo", system-ui;
+    letter-spacing: .2rem;
     text-align: center;
-    font-size: 5rem;
+    font-size: 3.5rem;
 }
 
 .fav-popup {
@@ -296,7 +324,7 @@ footer h3 {
     height: 100vh;
 
     background-color: rgba(0, 1, 73, 0.8);
-    color: rgba(0, 1, 73, 0.8) ;
+    color: rgba(0, 1, 73, 0.8);
 
     visibility: hidden;
 }
@@ -372,10 +400,13 @@ footer h3 {
 
 .pj-title {
     margin: 2rem 1rem 1rem 1rem;
-    text-align: center;
 
     background-color: #4fa3469a;
     color: #034903;
+
+    font-family: "Agbalumo", system-ui;
+    letter-spacing: .2rem;
+    text-align: center;
 
     padding: 1.5rem;
 }
@@ -436,7 +467,7 @@ footer h3 {
     height: 100vh;
 
     background-color: rgba(0, 1, 73, 0.8);
-    color: rgba(0, 1, 73, 0.8) ;
+    color: rgba(0, 1, 73, 0.8);
 
     visibility: hidden;
 }
@@ -481,7 +512,7 @@ footer h3 {
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
     .pj-pop-content {
         display: flex;
     }
@@ -499,6 +530,31 @@ footer h3 {
     margin: 0rem 2%;
     text-align: left;
 }
+
+.pj-pop-btn {
+    display: inline-block;
+
+    padding: 1.5rem 5rem;
+    border-radius: 2rem;
+
+    background-color: #c0f1bb;
+    color: #034903;
+
+    text-decoration: none;
+}
+
+.pj-pop-btn:hover {
+    background-color: #73b66c;
+    color: white;
+    transition: all .5s;
+}
+
+.pj-pop-content .pj-art {
+    width: 70%;
+    height: 70%;
+}
+
+
 
 /* About Page
 ---------------------------------------------------------------*/
@@ -529,9 +585,19 @@ footer h3 {
 .intro-info {
     background-color: #ffffffe0;
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 2.5rem;
     margin-left: 2rem;
 }
+
+.intro-info h1 {
+    font-family: "Agbalumo", system-ui;
+    letter-spacing: .2rem;
+}
+
+.intro-info p {
+    font-size: 2.5rem;
+}
+
 
 .ab-cover-img {
     display: flex;
@@ -561,6 +627,7 @@ footer h3 {
     color: #034903;
 
     text-decoration: none;
+    font-size: 2.5rem;
 }
 
 .resume-btn:hover {
@@ -579,13 +646,21 @@ footer h3 {
 .ab-sect ul {
     list-style-type: '💚';
     margin-left: 5rem;
+    margin-right: 1.5rem;
+
+    font-size: 2rem;
 }
+
 
 .ab-title {
     margin: 0;
     padding: 1rem 2rem;
     border-radius: 2rem 2rem 0 0rem;
     background-color: #84c6ec;
+
+    font-family: "Agbalumo", system-ui;
+    letter-spacing: .2rem;
+    font-size: 3rem;
 
 }
 
